@@ -13,4 +13,10 @@ class Calculator extends React.Component {
   }
 }
 
+class Display extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+}
+
 ReactDOM.render(<Calculator/>, document.getElementById('root'))
