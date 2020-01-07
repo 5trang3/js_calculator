@@ -17,6 +17,11 @@ class Display extends React.Component {
   constructor(props) {
     super(props);
   }
+  render() {
+    return (
+      <div>Test</div>
+    )
+  }
 }
 
 ReactDOM.render(<Calculator/>, document.getElementById('root'))
