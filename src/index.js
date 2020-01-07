@@ -26,10 +26,10 @@ class Display extends React.Component {
   }
 }
 
-ReactDOM.render(<Calculator/>, document.getElementById('root'))
-
 class Button extends React.Component {
   constructor(props) {
     super(props)
   }
 }
+
+ReactDOM.render(<Calculator/>, document.getElementById('root'))
