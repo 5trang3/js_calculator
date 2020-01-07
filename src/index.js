@@ -8,7 +8,9 @@ class Calculator extends React.Component {
   }
   render() {
     return (
-      <div id='calculator'></div>
+      <div id='calculator'>
+        <Display/>
+      </div>
     )
   }
 }
