@@ -21,7 +21,7 @@ class Display extends React.Component {
   }
   render() {
     return (
-      <div>Test</div>
+      <div id='display'></div>
     )
   }
 }
