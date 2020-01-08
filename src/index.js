@@ -110,7 +110,7 @@ class Button extends React.Component {
   }
   render() {
     return(
-      <button></button>
+      <button id={this.props.id}>{this.props.name}</button>
     )
   }
 }
