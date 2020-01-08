@@ -78,9 +78,16 @@ class Calculator extends React.Component {
     super(props);
   }
   render() {
+    let buttons = [];
+    for (let i = 0; i < this.props.buttonInfo.length; i++) {
+      buttons.push(
+        <Button id = {this.props.buttonInfo[i]['id']} name = {this.props.buttonInfo[i]['name']}/>
+      )
+    }
     return (
       <div id='calculator'>
         <Display/>
+        {buttons}
       </div>
     )
   }
