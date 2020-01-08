@@ -2,25 +2,76 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-let buttonInfo = {
-  7 : 'seven',
-  8 : 'eight',
-  9 : 'nine',
-  '+' : 'add',
-  'AC' : 'clear',
-  4 : 'four',
-  5 : 'five',
-  6 : 'six',
-  '-' : 'minus',
-  1 : 'one',
-  2 : 'two',
-  3 : 'three',
-  '/' : 'divide',
-  '=' : 'equals',
-  '.' : 'decimal',
-  0 : 'zero',
-  'x' : 'multiply'
-}
+let buttonInfo = [
+  {
+    'name' : 7,
+    'id' : 'seven'
+  },
+  {
+    'name' : 8,
+    'id' : 'eight'
+  },
+  {
+    'name' : 9,
+    'id' : 'nine'
+  },
+  {
+    'name' : '+',
+    'id' : 'add'
+  },
+  {
+    'name' : 'AC',
+    'id' : 'clear'
+  },
+  {
+    'name' : 4,
+    'id' : 'four'
+  },
+  {
+    'name' : 5,
+    'id' : 'five'
+  },
+  {
+    'name' : 6,
+    'id' : 'six'
+  },
+  {
+    'name' : '-',
+    'id' : 'subtract'
+  },
+  {
+    'name' : 1,
+    'id' : 'one'
+  },
+  {
+    'name' : 2,
+    'id' : 'two'
+  },
+  {
+    'name' : 3,
+    'id' : 'three'
+  },
+  {
+    'name' : '/',
+    'id' : 'divide'
+  },
+  {
+    'name' : '=',
+    'id' : 'equals'
+  },
+  {
+    'name' : 'decimal',
+    'id' : '.'
+  },
+  {
+    'name' : 0,
+    'id' : 'zero'
+  },
+  {
+    'name' : 'x',
+    'id' : 'multiply'
+  },
+]
 
 class Calculator extends React.Component {
   constructor(props) {
