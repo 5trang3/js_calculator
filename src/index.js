@@ -60,8 +60,8 @@ let buttonInfo = [
     'id' : 'equals'
   },
   {
-    'name' : 'decimal',
-    'id' : '.'
+    'name' : '.',
+    'id' : 'decimal'
   },
   {
     'name' : 0,
