@@ -82,7 +82,13 @@ class Calculator extends React.Component {
     }
   }
   onNumberClick(num) {
-    
+    const inputsLength = this.state.inputs.length;
+    if (inputsLength == 0) {
+      this.setState({
+        inputs : [num],
+        display : num
+      })
+    }
   }
   render() {
     let buttons = [];
