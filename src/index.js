@@ -90,7 +90,7 @@ class Calculator extends React.Component {
     }
     return (
       <div id='calculator'>
-        <Display/>
+        <Display display={this.state.display}/>
         {buttons}
       </div>
     )
@@ -103,7 +103,7 @@ class Display extends React.Component {
   }
   render() {
     return (
-      <div id='display'></div>
+      <div id='display'>{this.props.display}</div>
     )
   }
 }
