@@ -76,6 +76,10 @@ let buttonInfo = [
 class Calculator extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      inputs : [],
+      display : 0
+    }
   }
   render() {
     let buttons = [];
