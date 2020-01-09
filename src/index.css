@@ -1,0 +1,25 @@
+#calculator {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+}
+
+#display {
+  grid-area: 1/1/2/6
+}
+
+#clear {
+  grid-area: 2/5/4/6
+}
+
+#equals {
+  grid-area: 4/5/6/6
+}
+
+#multiply {
+  grid-area: 5/4/6/5
+}
+
+#decimal {
+  grid-area: 5/3/6/4
+}
