@@ -81,6 +81,9 @@ class Calculator extends React.Component {
       display : 0
     }
   }
+  onNumberClick(num) {
+    
+  }
   render() {
     let buttons = [];
     for (let i = 0; i < this.props.buttonInfo.length; i++) {
