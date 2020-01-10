@@ -84,7 +84,7 @@ class Calculator extends React.Component {
   }
   getDisplay() {
     let display = 0;
-    if (this.state.inputs.length != 0) {
+    if (this.state.inputs.length !== 0) {
       display = this.state.inputs.join("")
     };
     return display
@@ -96,19 +96,19 @@ class Calculator extends React.Component {
     const inputsEnd = this.state.inputs[inputsLength - 1];
     const inputsSecondEnd = this.state.inputs[inputsLength - 2];
     if (isNum.test(name)) {
-      if (inputsLength == 0 || isOperation.test(inputsEnd)) {
+      if (inputsLength === 0 || isOperation.test(inputsEnd)) {
         this.setState(state => ({
           inputs : [...this.state.inputs, name]
         }))
       }
-      else if (isNum.test(inputsEnd) || inputsEnd == '.') {
+      else if (isNum.test(inputsEnd) || inputsEnd === '.') {
         let newInputs = this.state.inputs.slice();
         newInputs[newInputs.length - 1] = inputsEnd + name;
         this.setState({
           inputs : newInputs
         })
       }
-      else if (inputsEnd == '0') {
+      else if (inputsEnd === '0') {
         let newInputs = this.state.inputs.slice();
         newInputs[newInputs.length - 1] = name;
         this.setState ({
@@ -116,14 +116,14 @@ class Calculator extends React.Component {
         })
       }
       else {
-        if (inputsLength == 1 || isOperation.test(inputsSecondEnd)) {
+        if (inputsLength === 1 || isOperation.test(inputsSecondEnd)) {
           let newInputs = this.state.inputs.slice();
           newInputs[newInputs.length - 1] = newInputs[newInputs.length - 1] + name;
           this.setState({
             inputs : newInputs
           })
         }
-        else if (isNum.test(inputsSecondEnd) || inputsSecondEnd == '0') {
+        else if (isNum.test(inputsSecondEnd) || inputsSecondEnd === '0') {
           this.setState(state => ({
             inputs : [...state.inputs, name]
           }))
