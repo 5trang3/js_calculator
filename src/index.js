@@ -100,7 +100,7 @@ class Calculator extends React.Component {
     let buttons = [];
     for (let i = 0; i < this.props.buttonInfo.length; i++) {
       buttons.push(
-        <Button id = {this.props.buttonInfo[i]['id']} name = {this.props.buttonInfo[i]['name']}/>
+        <Button id = {this.props.buttonInfo[i]['id']} name = {this.props.buttonInfo[i]['name']} handleClick={this.handleButtonClick}/>
       )
     }
     return (
@@ -129,7 +129,7 @@ class Button extends React.Component {
   }
   render() {
     return(
-      <button id={this.props.id}>{this.props.name}</button>
+      <button id={this.props.id} onClick={() => this.props.handleClick(this.props.name)}>{this.props.name}</button>
     )
   }
 }
