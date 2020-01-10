@@ -144,6 +144,11 @@ class Calculator extends React.Component {
         })
       }
     }
+    else if (name === 'AC') {
+      this.setState({
+        inputs : []
+      })
+    }
   }
   render() {
     let buttons = [];
