@@ -95,6 +95,41 @@ class Calculator extends React.Component {
     const inputsLength = this.state.inputs.length;
     const inputsEnd = this.state.inputs[inputsLength - 1];
     const inputsSecondEnd = this.state.inputs[inputsLength - 2];
+    if (isNum.test(name)) {
+      if (inputsLength == 0 || isOperation.test(inputsEnd)) {
+        this.setState(state => ({
+          inputs : [...this.state.inputs, name]
+        }))
+      }
+      else if (isNum.test(inputsEnd) || inputsEnd == '.') {
+        let newInputs = this.state.inputs.slice();
+        newInputs[newInputs.length - 1] = inputsEnd + name;
+        this.setState({
+          inputs : newInputs
+        })
+      }
+      else if (inputsEnd == '0') {
+        let newInputs = this.state.inputs.slice();
+        newInputs[newInputs.length - 1] = name;
+        this.setState ({
+          inputs : newInputs
+        })
+      }
+      else {
+        if (inputsLength == 1 || isOperation.test(inputsSecondEnd)) {
+          let newInputs = this.state.inputs.slice();
+          newInputs[newInputs.length - 1] = newInputs[newInputs.length - 1] + name;
+          this.setState({
+            inputs : newInputs
+          })
+        }
+        else if (isNum.test(inputsSecondEnd) || inputsSecondEnd == '0') {
+          this.setState(state => ({
+            inputs : [...state.inputs, name]
+          }))
+        }
+      }
+    }
   }
   render() {
     let buttons = [];
