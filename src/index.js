@@ -93,6 +93,7 @@ class Calculator extends React.Component {
     const isOperation = /[*+\/]/;
     const inputsLength = this.state.inputs.length;
     const inputsEnd = this.state.inputs[inputsLength - 1];
+    const inputsSecondEnd = this.state.inputs[inputsLength - 2];
   }
   render() {
     let buttons = [];
