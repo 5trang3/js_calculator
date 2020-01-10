@@ -97,7 +97,7 @@ class Calculator extends React.Component {
     }
     return (
       <div id='calculator'>
-        <Display display={this.state.display}/>
+        <Display display={this.getDisplay()}/>
         {buttons}
       </div>
     )
