@@ -77,8 +77,7 @@ class Calculator extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      inputs : [],
-      display : 0
+      inputs : []
     }
   }
   render() {
