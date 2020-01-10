@@ -89,7 +89,8 @@ class Calculator extends React.Component {
     return display
   }
   handleButtonClick(name) {
-    
+    const isNum = /[1-9]/;
+    const isOperation = /[*+\/]/;
   }
   render() {
     let buttons = [];
