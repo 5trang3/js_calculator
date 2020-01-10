@@ -130,6 +130,20 @@ class Calculator extends React.Component {
         }
       }
     }
+    else if (name === '.') {
+      if (Number(inputsEnd) && inputsEnd.includes('.') === false) {
+        let newInputs = this.state.inputs.slice();
+        newInputs[newInputs.length - 1] += '.';
+        this.setState(state => ({
+          inputs: newInputs
+        }))
+      }
+      else if (inputsLength === 0) {
+        this.setState({
+          inputs : [name]
+        })
+      }
+    }
   }
   render() {
     let buttons = [];
