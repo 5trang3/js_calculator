@@ -148,9 +148,6 @@ class Calculator extends React.Component {
 }
 
 class Display extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     return (
       <div id='display'>{this.props.display}</div>
@@ -159,9 +156,6 @@ class Display extends React.Component {
 }
 
 class Button extends React.Component {
-  constructor(props) {
-    super(props)
-  }
   render() {
     return(
       <button id={this.props.id} onClick={() => this.props.handleClick(this.props.name)}>{this.props.name}</button>
