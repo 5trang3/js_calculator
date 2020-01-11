@@ -149,6 +149,20 @@ class Calculator extends React.Component {
         inputs : []
       })
     }
+    else if (name === '0') {
+      if (inputsLength === 0 || isOperation.test(inputsEnd) || inputsEnd === '-') {
+        this.setState(state =>({
+          inputs : [...state.inputs, name]
+        }))
+      }
+      else if ((isNaN(inputsEnd) === false && inputsEnd !== '0') || inputsEnd === '.') {
+        let newInputs = this.state.inputs.slice();
+        newInputs[newInputs.length - 1] += '0';
+        this.setState({
+          inputs : newInputs
+        })
+      }
+    }
   }
   render() {
     let buttons = [];
