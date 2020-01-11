@@ -178,7 +178,7 @@ class Calculator extends React.Component {
         })
       }
     }
-    else if (name === '-') {
+    else if (name === '-' && inputsEnd !== '-') {
       this.setState(state => ({
         inputs : [...state.inputs, '-']
       }))
