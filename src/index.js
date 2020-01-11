@@ -83,6 +83,7 @@ class Calculator extends React.Component {
     this.handleButtonClick = this.handleButtonClick.bind(this)
   }
   getDisplay() {
+    console.log(this.state.inputs)
     let display = 0;
     if (this.state.inputs.length !== 0) {
       display = this.state.inputs.join("")
@@ -176,6 +177,11 @@ class Calculator extends React.Component {
           inputs : newInputs
         })
       }
+    }
+    else if (name === '-') {
+      this.setState(state => ({
+        inputs : [...state.inputs, '-']
+      }))
     }
   }
   render() {
