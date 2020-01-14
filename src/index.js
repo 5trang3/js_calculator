@@ -185,8 +185,10 @@ class Calculator extends React.Component {
       }))
     }
     else if (name === '=') {
+      const calculatedValue = this.handleCalculation(this.state.inputs);
+      const roundedResult = [Number(Math.round(calculatedValue[0]+'e4')+'e-4')];
       this.setState(state => ({
-        inputs : this.handleCalculation(state.inputs)
+        inputs : roundedResult
       }))
     }
   }
