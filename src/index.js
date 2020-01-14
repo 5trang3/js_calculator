@@ -184,6 +184,50 @@ class Calculator extends React.Component {
       }))
     }
   }
+
+  handleCalculation(inputs) {
+    if (inputs.length === 0) {
+      return ['0'];
+    }
+    else if (inputs.length === 1) {
+      return inputs;
+    }
+    else {
+      for (let i = 0; i < inputs.length; i++) {
+        if (inputs[i] === 'x') {
+          inputs[i - 1] = Number(inputs[i - 1]);
+          inputs[i + 1] = Number(inputs[i + 1]);
+          inputs.splice(i - 1, 3, inputs[i - 1] * inputs[i + 1]);
+          inputs[i - 1] = inputs[i - 1].toString();
+          return this.handleCalculation(inputs)
+        }
+        else if (inputs[i] === '/') {
+          inputs[i - 1] = Number(inputs[i - 1]);
+          inputs[i + 1] = Number(inputs[i + 1]);
+          inputs.splice(i - 1, 3, inputs[i - 1] / inputs[i + 1]);
+          inputs[i - 1] = inputs[i - 1].toString();
+          return this.handleCalculation(inputs)
+        }
+      }
+      for (let i = 0; i < inputs.length; i++) {
+        if (inputs[i] === '+') {
+          inputs[i - 1] = Number(inputs[i - 1]);
+          inputs[i + 1] = Number(inputs[i + 1]);
+          inputs.splice(i - 1, 3, inputs[i - 1] + inputs[i + 1]);
+          inputs[i - 1] = inputs[i - 1].toString();
+          return this.handleCalculation(inputs)
+        }
+        else if (inputs[i] === '-') {
+          inputs[i - 1] = Number(inputs[i - 1]);
+          inputs[i + 1] = Number(inputs[i + 1]);
+          inputs.splice(i - 1, 3, inputs[i - 1] - inputs[i + 1]);
+          inputs[i - 1] = inputs[i - 1].toString();
+          return this.handleCalculation(inputs)
+        }
+      }
+    }
+  }
+
   render() {
     let buttons = [];
     for (let i = 0; i < this.props.buttonInfo.length; i++) {
