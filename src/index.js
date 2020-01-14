@@ -81,6 +81,7 @@ class Calculator extends React.Component {
     }
     this.getDisplay = this.getDisplay.bind(this)
     this.handleButtonClick = this.handleButtonClick.bind(this)
+    this.handleCalculation = this.handleCalculation.bind(this)
   }
   getDisplay() {
     console.log(this.state.inputs)
