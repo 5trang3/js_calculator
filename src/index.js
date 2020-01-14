@@ -184,6 +184,11 @@ class Calculator extends React.Component {
         inputs : [...state.inputs, '-']
       }))
     }
+    else if (name === '=') {
+      this.setState(state => ({
+        inputs : this.handleCalculation(state.inputs)
+      }))
+    }
   }
 
   handleCalculation(inputs) {
