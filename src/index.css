@@ -1,6 +1,8 @@
 html {
   height: 100%;
-  width: 100%
+  width: 100%;
+  background-color: #35495E;
+  color: #EE8572
 }
 
 body {
@@ -20,16 +22,18 @@ body {
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   width: 400px;
   height: 300px;
-  border: 3px solid black;
-  padding: 2px
+  border: 3px solid #EE8572;
+  padding: 2px;
+  font-family: 'Orbitron', sans-serif;
 }
 
 #display {
   grid-area: 1/1/2/6;
   text-align: right;
   font-size: 50px;
-  border: 2px solid black;
+  border: 2px solid #EE8572;
   padding-right: 3px;
+  background-color: #347474
 }
 
 #clear {
@@ -50,4 +54,13 @@ body {
 
 #zero {
   grid-area: 5/2/6/3
+}
+
+button {
+  border: 1px solid #EE8572;
+  margin: 2px;
+  background-color: #347474;
+  color: #EE8572;
+  font-size: 20px;
+  font-family: 'Orbitron', sans-serif;
 }
